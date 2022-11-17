@@ -24,13 +24,13 @@ export default function Shop() {
   return (
     <>
 
-      <h1>Shop</h1>
+      {/* <h1>Shop</h1>
       <section id='header'>
         <a href="#"><img src="public/logo.png" className='logo' alt="" /></a>
         <div>
 
         </div>
-      </section>
+      </section> */}
 
       <section id='page-header'>
         <h2>#Stayhome</h2>
@@ -43,13 +43,13 @@ export default function Shop() {
           {products.length > 0 ? products.map(p => (
             <div className='pro' key={p._id}>
               {/* 1000000 */}
-              <img src={p.img} alt="" />
+              <img src={p.img} alt="" width="20px" height="260px" />
               <div className='des'>
                 <span><b>{p.name}p</b></span>
                 {/* let text = "How are you doing today?";
                 const myArray = text.split(" ");
                 let word = myArray[1]; */}
-                <p>{p.desc}</p>
+                {/* <p>{p.desc}</p> */}
                 <div className='star'>
                   <i className='fas fa-star'></i>
                   <i className='fas fa-star'></i>

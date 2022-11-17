@@ -6,8 +6,34 @@ import jwt_decode from 'jwt-decode';
 
 export default function Cart() {
 
-  const [orders, setOrders] = useState([])
+  const [orders, setOrders] = useState([]);
   const [user, setUser] = useState({});
+  const [cop, setCop] = useState("");
+
+  const addToCart = (e) => {
+    e.preventDefault()
+    if (e.target.value == "Alex") {
+      setCop(e.target.value)
+      // alert("congradulations, your order is placed")
+    }
+    else {
+      // alert("You are not a GA student.")
+    }
+
+  }
+
+  console.log(cop)
+
+  const addCop = () => {
+    if (cop == "Alex") {
+      alert("congradulations, your order is placed")
+    }
+    else {
+      alert("You are not a GA student.")
+    }
+  }
+
+
 
 
   const getItems = () => {
@@ -50,13 +76,13 @@ export default function Cart() {
 
   return (
     <>
-      <h1>cart</h1>
+      {/* <h1>cart</h1>
       <section id='header'>
         <a href="#"><img src="public/logo.png" className='logo' alt="" /></a>
         <div>
 
         </div>
-      </section>
+      </section> */}
 
       <section id='page-header'>
         <h2>#Stayhome</h2>
@@ -77,12 +103,12 @@ export default function Cart() {
           <tbody>
             <tr>
               {orders.length > 0 ? orders.map(o => (
-                <div className='pro' key={o._id}>
+                <div class='pro' key={o._id}>
                   <td onClick={() => deleteItem(o._id)}>cross</td>
-                  <td><img src={o.img} alt="" /></td>
+                  <td><img src={o.img} alt="" class="imgcrl" /></td>
                   <td>{o.name}</td>
-                  <td>{o.price}</td>
-                  <td><input type="number" value={o.quantity} /></td>
+                  <td class="ali">{o.price}</td>
+                  <td><input type="number" value={o.quantity} class="some" /></td>
                   {/* <h3>{o.name}</h3> */}
                   {/* <img src={o.img} alt="" /> */}
                   {/* <h3>{o.price}</h3> */}
@@ -98,8 +124,8 @@ export default function Cart() {
         <div id='coupon'>
           <h3>Apply Coupon</h3>
           <div>
-            <input type="text" placeholder='Enter your Coupon Number' />
-            <button class="normal">Apply</button>
+            <input type="text" onChange={(e) => addToCart(e)} placeholder='Enter your Fav GA Instructor Name' />
+            <button class="normal" onClick={(e) => addCop(e)}>Apply</button>
           </div>
         </div>
 

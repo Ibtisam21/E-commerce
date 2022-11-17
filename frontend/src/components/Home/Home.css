@@ -45,6 +45,10 @@ button.white {
     background-position: top 25, right 0;
 }
 
+.star {
+    background-image: url("https://imgur.com/a/hC2YUiV.png");
+}
+
 #hero h4 {
     padding-bottom: 15px;
 }

@@ -81,17 +81,19 @@ function App() {
     <>
       {/* //html logic here */}
       <Router>
-        <nav>
-          <Link to="/">Home</Link>&nbsp;
-          <Link to="/About">About</Link>&nbsp;
-          <Link to="/Contact">Contact us</Link>&nbsp;
-          <Link to="/Blog">product</Link>&nbsp;
-          <Link to="/Shop">Shop</Link>&nbsp;
-          <Link to="/Cart">Cart</Link>&nbsp;
-          <Link to="/Account">Account</Link>&nbsp;
-          <Link to="/Signup">Sign up</Link>&nbsp;
-          <Link to="/signin">Login</Link>&nbsp;
-        </nav>
+        <div>
+          <ul class="navbar">
+            <li> <Link to="/">Home</Link>&nbsp;</li>
+            <li> <Link to="/About">About</Link>&nbsp;</li>
+            {/* <Link to="/Contact">Contact us</Link>&nbsp; */}
+            <li><Link to="/Blog">product</Link>&nbsp;</li>
+            <li><Link to="/Shop">Shop</Link>&nbsp;</li>
+            <li><Link to="/Cart">Cart</Link>&nbsp;</li>
+            {/* <Link to="/Account">Account</Link>&nbsp; */}
+            <li><Link to="/Signup">Sign up</Link>&nbsp;</li>
+            <li><Link to="/signin">Login</Link>&nbsp;</li>
+          </ul>
+        </div>
         {/* <Home/> */}
         <Routes>
           <Route path='/profile' element={<Profile />} />
@@ -101,11 +103,11 @@ function App() {
           <Route path="/signin" element={token !== null ? <HomePage></HomePage> : <Signin ></Signin>} />
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
+          {/* <Route path="/contact" element={<Contact />}></Route> */}
           <Route path="/blog/:id" element={<Blog />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/account" element={<Account />}></Route>
+          {/* <Route path="/account" element={<Account />}></Route> */}
         </Routes>
       </Router>
     </>

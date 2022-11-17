@@ -5,6 +5,10 @@
     white-space: nowrap;
 }
 
+.pro {
+    padding-left: 30px;
+}
+
 #cart table img {
     width: 70px;
 }
@@ -64,4 +68,52 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3 {
+    padding-top: 30px;
+}
+
+.imgcrl {
+    padding-left: 110px;
+    padding-right: 160px;
+}
+
+#coupon input {
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+
+#coupon button {
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+
+#Subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#Subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#Subtotal table td {
+    width: 50px;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
 }

@@ -4,13 +4,13 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <h1>About us </h1>
+        {/* <h1>About us </h1>
         <section id='header'>
           <a href="#"><img src="public/logo.png" class='logo' alt="" /></a>
           <div>
 
           </div>
-        </section>
+        </section> */}
 
         <section id='page-header' class='about-header'>
 

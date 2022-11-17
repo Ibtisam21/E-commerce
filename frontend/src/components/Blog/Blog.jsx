@@ -1,8 +1,9 @@
 import './Blog.css'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
+
 export default function Blog() {
   const { id } = useParams()
   const [product, setProduct] = useState(null)
@@ -10,7 +11,7 @@ export default function Blog() {
   const [quantity, setQuantity] = useState(1)
   const [products, setProducts] = useState([])
 
-
+  const navigate = useNavigate()
   let addToCart = () => {
     // alert(123)
     let token = localStorage.getItem('token')
@@ -33,7 +34,8 @@ export default function Blog() {
         }
       },)
         .then(res => {
-          alert("Item successfully added to the cart")
+          // alert("Item successfully added to the cart")
+          navigate('/cart')
         })
         .catch(err => {
           console.log(err)
@@ -73,13 +75,13 @@ export default function Blog() {
   return (
     <>
 
-      <h1>Products </h1>
+      {/* <h1>Products </h1>
       <section id='header'>
         <a href="#"><img src="public/logo.png" class='logo' alt="" /></a>
         <div>
 
         </div>
-      </section>
+      </section> */}
 
       <section id='prodetails' class='section-p1'>
         <div class='single-pro-image'>
@@ -106,7 +108,7 @@ export default function Blog() {
           <select name="" id="size"
             onChange={setItemSize} >
             <option value="">Select Size</option>
-            {[2, 3, 4, 5].length > 0 ? [2, 3, 4, 5].map(size => (
+            {[32, 34, 40, 43].length > 0 ? [32, 34, 40, 43].map(size => (
               // {product?.size?.length > 0 ? product?.size?.map(size => (
               <option value={size}  >{size}</option>
             )) : null}
